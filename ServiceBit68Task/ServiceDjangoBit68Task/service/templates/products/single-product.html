@@ -2,4 +2,8 @@
 
 {% block content %}
 <h3>this is single product </h3>
+<h3> Name ==> {{projectObj.name}} </h3>
+<h3> Price ==> {{projectObj.price}} </h3>
+<h3> User ==> {{projectObj.user}} </h3>
+<a href="{% url 'products' %}" class="btn btn-info"> back </a>
 {% endblock content %}

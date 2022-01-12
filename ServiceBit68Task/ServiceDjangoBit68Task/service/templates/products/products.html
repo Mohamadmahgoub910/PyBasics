@@ -1,5 +1,26 @@
 {% extends 'main.html' %}
 
 {% block content %}
-<h3>this is all products  </h3>
+<h3>this is all products </h3>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Seller</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for product in products %}
+        <tr>
+            <td> <a href= "{% url 'product' product.id %}" > {{ product.name }} </a> </td>
+            <td>{{ product.price }}</td>
+            <td>{{ product.user }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+
 {% endblock content %}
