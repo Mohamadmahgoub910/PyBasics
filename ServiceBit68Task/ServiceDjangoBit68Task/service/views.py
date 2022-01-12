@@ -3,7 +3,7 @@ from django.shortcuts import render
 # Create your views here.
 
 def products(request):
-    return HttpResponse("Hello From Products ")
+    return render(request, 'products/products.html')
 
 def product(request, pk):
-    return HttpResponse('Single product' + ' ' + str(pk) )
+    return render(request, 'products/single-product.html')
