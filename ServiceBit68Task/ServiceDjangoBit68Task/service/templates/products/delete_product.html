@@ -1,0 +1,11 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<form method="POST">
+    {% csrf_token %}
+    <h4 class="warning" > are u want to delete <strong>{{product}}</strong> </h4>
+    <br>
+    <input class="btn btn-danger" type="submit" value="Confirm"> &nbsp;
+    <a href="{% url 'products' %}" class="btn btn-success"> back </a>
+</form>
+{% endblock content %}

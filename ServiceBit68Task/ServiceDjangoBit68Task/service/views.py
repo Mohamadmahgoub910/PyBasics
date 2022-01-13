@@ -1,5 +1,5 @@
 from .forms import ProductForm
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Products
 # Create your views here.
 
@@ -15,5 +15,29 @@ def product(request, pk):
 
 def createProduct(request):
     form = ProductForm()
+    if request.method == 'POST':
+        form = ProductForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('products')
     context = {'form':form}
     return render(request, 'products/product_form.html', context)
+
+def updateProduct(request, pk):
+    product = Products.objects.get(id=pk)
+    form = ProductForm(instance=product)
+    if request.method == 'POST':
+        form = ProductForm(request.POST, instance=product)
+        if form.is_valid():
+            form.save()
+            return redirect('products')
+    context = {'form':form}
+    return render(request, 'products/product_form.html', context)
+
+def deleteProduct(request, pk):
+    product = Products.objects.get(id=pk)
+    if request.method == 'POST':
+        product.delete()
+        return redirect('products')
+    context = {'product':product}
+    return render(request, 'products/delete_product.html', context)

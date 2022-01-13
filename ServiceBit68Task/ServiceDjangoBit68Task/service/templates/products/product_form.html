@@ -2,6 +2,7 @@
 
 <h1> Product Form Create  </h1>
 {% block content %}
+<a href="{% url 'products' %}" class="btn btn-info"> back </a> <br> <br>
 <form action="" method="POST">
     {% csrf_token %}
     {{form.as_p}}

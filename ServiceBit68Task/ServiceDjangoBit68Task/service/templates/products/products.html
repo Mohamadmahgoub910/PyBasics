@@ -19,6 +19,7 @@
             <th scope="col">Name</th>
             <th scope="col">Price</th>
             <th scope="col">Seller</th>
+            <th style="text-align: center;" scope="col">Update/Delete</th>
         </tr>
     </thead>
     <tbody>
@@ -27,6 +28,10 @@
             <td> <a href="{% url 'product' product.id %}"> {{ product.name }} </a> </td>
             <td>{{ product.price }}</td>
             <td>{{ product.user }}</td>
+            <td style="text-align: center;"> 
+                <a href="{% url 'product-update' product.id %}" ><i style="color: greenyellow; font-size: x-large;" class="fa fa-edit"  aria-hidden="true"></i></a>
+                &nbsp;&nbsp; <a href="{% url 'product-delete' product.id %}"><i style="color: rgba(230, 43, 43, 0.842); font-size: x-large;" class="fa fa-trash"  aria-hidden="true"></i></a>
+            </td>
         </tr>
         {% endfor %}
     </tbody>
