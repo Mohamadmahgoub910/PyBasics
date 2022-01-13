@@ -17,15 +17,19 @@ You need
 - python > 3
 - MYSQL || Postgres
 
+- make that command to install all requirements :-
+- pip install -r .\requirements.txt
+
 ###Usage
 
-You could browse the website by running the server using the following command(you need to be in the same folder with manage.py)
+You could browse the website by running the server using the following command
+(you need to be in the same folder with manage.py)
 
 ```
 python manage.py runserver
 ```
 
-Then you could access the websit by typing
+Then you could access the website by typing
 1- http://localhost:8000/api/products ==> get all products with user number who create that product
 2- http://localhost:8000/api/product/8 ==> get the product with user_id
 3- http://localhost:8000/api/createProduct ==> create product made
