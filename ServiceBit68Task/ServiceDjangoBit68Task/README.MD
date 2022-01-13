@@ -40,9 +40,9 @@ Then you could access the website by typing
 <!-- ///////////////////////////////////////////////////////////////////////////////////////// -->
 <!-- i should here make a view for users but there is no time for now  -->
 
-6- http://127.0.0.1:8000/api/registerU/ ==> Register User Serializer made
-7- http://127.0.0.1:8000/api/getUsers/ ==> get all users who we created
-8- http://127.0.0.1:8000/api/getUser/2/ ==> get the user by id
+- 6- http://127.0.0.1:8000/api/registerU/ ==> Register User Serializer made
+- 7- http://127.0.0.1:8000/api/getUsers/ ==> get all users who we created
+- 8- http://127.0.0.1:8000/api/getUser/2/ ==> get the user by id
 
 ###Future works
 
@@ -52,4 +52,4 @@ Then you could access the website by typing
 
 ## Author
 
-- [ MoMa7goub]
+- [ ** MoMa7goub **] ( https://github.com/Mohamadmahgoub910/ )
