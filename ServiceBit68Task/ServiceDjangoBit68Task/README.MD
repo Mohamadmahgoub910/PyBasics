@@ -30,11 +30,12 @@ python manage.py runserver
 ```
 
 Then you could access the website by typing
-1- http://localhost:8000/api/products ==> get all products with user number who create that product
-2- http://localhost:8000/api/product/8 ==> get the product with user_id
-3- http://localhost:8000/api/createProduct ==> create product made
-4- http://127.0.0.1:8000/api/products/updateProduct/8 ==> update product using id
-5- http://127.0.0.1:8000/api/products/deleteProduct/8 ==> delete product using confirmation
+
+- 1- http://localhost:8000/api/products ==> get all products with user number who create that product
+- 2- http://localhost:8000/api/product/8 ==> get the product with user_id
+- 3- http://localhost:8000/api/createProduct ==> create product made
+- 4- http://127.0.0.1:8000/api/products/updateProduct/8 ==> update product using id
+- 5- http://127.0.0.1:8000/api/products/deleteProduct/8 ==> delete product using confirmation
 
 <!-- ///////////////////////////////////////////////////////////////////////////////////////// -->
 <!-- i should here make a view for users but there is no time for now  -->
