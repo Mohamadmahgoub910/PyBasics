@@ -1,6 +1,16 @@
 {% extends 'main.html' %}
 
 {% block content %}
+<style>
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+</style>
+<a href="{% url 'product-create' %}"><i style="float: right; font-size: xx-large; color: green;" class="fa fa-plus"
+        aria-hidden="true"></i></a>
+<div class="clearfix"></div>
 <h3>this is all products </h3>
 
 <table class="table">
@@ -14,7 +24,7 @@
     <tbody>
         {% for product in products %}
         <tr>
-            <td> <a href= "{% url 'product' product.id %}" > {{ product.name }} </a> </td>
+            <td> <a href="{% url 'product' product.id %}"> {{ product.name }} </a> </td>
             <td>{{ product.price }}</td>
             <td>{{ product.user }}</td>
         </tr>
