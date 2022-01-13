@@ -4,19 +4,21 @@
     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="{% url 'products' %}">Home</a>
+        <a class="nav-link" href="{% url 'products' %}">Home </a>
       </li>
+      {% if request.user.is_authenticated  %}
       <li class="nav-item">
-        
+        <a class="nav-link" href="{% url 'logout' %}">Logout</a>
       </li>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search by user" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="search">Search</button>
-      </form>
+      {% else %}
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'login' %}">Login/Signup</a>
+      </li>
+      {% endif %}
+    </ul>
 
   </div>
 </nav>
