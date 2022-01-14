@@ -15,3 +15,4 @@ if __name__ == '__main__':
         print("Not Weird")
     elif inp > 20:
         print()
+# problem link ==> https://www.hackerrank.com/challenges/py-if-else?isFullScreen=true
